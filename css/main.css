@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 :root {
   --main-bg:  hsl(222, 26%, 31%);
   --display-bg: hsl(224, 36%, 15%);
@@ -28,7 +32,6 @@ main.container {
 
 .calc-container {
   width: 500px;
-  height: 400px;
 }
 
 .calc-display {
@@ -41,8 +44,8 @@ main.container {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 20px;
-  font-size: 2.8rem;
+  padding-right: 2rem;
+  font-size: 4rem;
 }
 
 .calc-keyboard {
@@ -51,7 +54,7 @@ main.container {
   height: 100%;
   border-radius: 8px;
   background-color: var(--keyboard-bg);
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 .calc-buttons-container {
@@ -63,6 +66,10 @@ main.container {
   justify-content: space-between;
 }
 
+.calc-buttons-container:last-child{
+  margin-bottom: 0;
+}
+
 .calc-buttons-container button {
   width: 90px;
   height: 60px;
@@ -71,7 +78,7 @@ main.container {
   border: none;
   background-color: var(--key-bg) ;
   color: var(--text-color-keys);
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: 400ms;
