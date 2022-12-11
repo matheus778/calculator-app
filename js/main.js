@@ -79,7 +79,7 @@ keyboardButtons.forEach( button => {
           if(display.textContent.indexOf('.') != -1){
             return
           }
-          
+
           display.textContent +=  button.textContent
           return;
           
@@ -135,5 +135,4 @@ function calculate() {
   }
 
   display.textContent = calcResult;
-  console.log(number1, mathOperation, number2)
 }
