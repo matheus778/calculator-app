@@ -16,7 +16,7 @@ keyboardButtons.forEach( button => {
     if(display.textContent == INITIAL_NUMBER_DISPLAY) {
 
       let bt = button.textContent;
-      if(bt == '+' || bt == '-' || bt == '/' || bt == 'X' || bt == 'RESET' || bt == 'DEL' || bt == '=') {
+      if(bt == '+' || bt == '-' || bt == '/' || bt == 'X' || bt == 'RESET' || bt == 'DEL' || bt == '=' || bt =='.') {
         return
       }
 
@@ -75,6 +75,14 @@ keyboardButtons.forEach( button => {
         case '=':
           return
 
+        case '.':
+          if(display.textContent.indexOf('.') != -1){
+            return
+          }
+          
+          display.textContent +=  button.textContent
+          return;
+          
         default:
           break;
       }
