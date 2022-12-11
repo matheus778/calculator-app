@@ -104,3 +104,51 @@ button.btn-calc {
   background-color: var(--key-calc-bg);
   color: white;
 }
+
+.swicth-theme-container {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.switch-theme-buttons {
+display: flex;
+align-items: flex-end;
+gap: 2rem;
+}
+
+.switch-theme-buttons h2 {
+  font-size: 1.3rem;
+}
+
+.switch-theme-buttons input[type="range"]{
+  all: unset;
+  width: 50px;
+  height: 20px;
+  background: var(--keyboard-bg);
+  border-radius: 8px;
+  padding: 0.2rem;
+}
+
+.switch-theme-buttons input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* remove a aparencia padão */
+  background: var(--key-calc-bg);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.switch-theme-buttons .theme-toggle {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.switch-theme-buttons div div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
