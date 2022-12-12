@@ -42,7 +42,24 @@ const themes = {
   },
 
 }
-setTheme('primary');
+
+window.addEventListener('load', ()=> {
+  let theme =  localStorage.getItem('theme');
+   if(theme == 'secondary') {
+    btnChangeTheme.value = 1;
+    setTheme(theme);
+  }
+
+  if(theme == 'primary') {
+    btnChangeTheme.value = 2;
+    setTheme(theme);
+  }
+
+  if(theme == 'tertiary') {
+    btnChangeTheme.value = 3;
+    setTheme(theme);
+  }
+})
 
 function setTheme(newTheme){
   const themeColors = themes[newTheme];
@@ -50,10 +67,11 @@ function setTheme(newTheme){
   Object.keys(themeColors).map(key=>{
     html.style.setProperty(`--${key}`,` ${themeColors[key]}`);
   })
+  localStorage.setItem('theme', newTheme);
 }
 
 btnChangeTheme.addEventListener('change', ({target}) => {
-  if(target.value) {
+  if(target.value == 1) {
     setTheme('secondary');
   }
 
