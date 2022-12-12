@@ -37,7 +37,8 @@ main.container {
 }
 
 .calc-container {
-  width: 500px;
+  width: 90%;
+  max-width: 500px;
 }
 
 .calc-display {
